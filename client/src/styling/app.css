@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    'nav board'
+    'nav board';
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav {
+  grid-area: nav;
+  border-right: 1px solid grey;
+  background-color: aliceblue;
+  padding: 1em 0 0 0;
+}
+
+.board {
+  grid-area: board;
+  /* border: 1px solid grey; */
+}
+
+.channel-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.channel-list li {
+  border: 1px solid grey;
+  padding: 1em;
+  margin: 1em;
+  background-color: white;
+}
+
+input,
+button {
+  padding: .5em;
+  border-radius: .3em;
+  border: .05em solid grey;
+  width: 20em;
+  margin: .5em;
+}
+
+.message-editor form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
