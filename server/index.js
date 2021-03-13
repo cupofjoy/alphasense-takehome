@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
+const path = require('path');
 const messageController = require('./controllers/messageController');
 
 /* MIDDLEWARES */
@@ -58,6 +59,10 @@ app.post('/api/:channel', messageController.postMessage, (req, res) => {
  */
 app.get('/', (req, res) => {
   return res.status(200).sendFile(path.resolve(__dirname, '../index.html'));
+});
+
+app.get('/build/bundle.js', (req, res) => {
+  return res.status(200).sendFile(path.resolve(__dirname, '../build/bundle.js'));
 })
 
 /* GLOBAL ERROR HANDLER */
